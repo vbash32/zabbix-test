@@ -14,9 +14,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get upgrade -y
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install zabbix-server-pgsql zabbix-frontend-php zabbix-apache-conf php-pgsql zabbix-agent       
 COPY create-db.sql /var/lib/postgresql
 RUN service postgresql start 
-RUN chown -R postgres:postgres /var/lib/postgresql 
-RUN ls -la /var/lib/postgresql 
-RUN su - postgres 
+#RUN chown -R postgres:postgres /var/lib/postgresql 
+#RUN ls -la /var/lib/postgresql 
+#RUN su - postgres 
 
 
 
